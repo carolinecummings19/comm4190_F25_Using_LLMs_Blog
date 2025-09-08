@@ -5,4 +5,4 @@ about:
   template: jolla
 ---
 
-About this blog
+Hi, my name is Caroline Cummings! I am a Senior studying Computer Science with a concentration in AI. I am excited to learn about the applications of using LLMs to improve the quality and efficiency of tasks in everyday life. 
