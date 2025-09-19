@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/004_localLLMs/localLLMS.html",
       "/posts/003_handyman/toilet_repair.html",
       "/posts/001_marathon_plan/marathon_plan.html",
       "/posts/002_baking_recipes/baking_blog.html",
