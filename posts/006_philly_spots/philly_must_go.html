@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Caroline Cummings">
+<meta name="dcterms.date" content="2025-09-19">
+<meta name="description" content="Asking Gemini how I should make the most of my senior year in Philadelphia.">
 
-<title>Caroline’s Explorations with LLMs</title>
+<title>Finding Philly’s Hidden Gems with Gemini – Caroline's Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33486d6390cc5f9ef26896ba28f0e32f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-33486d6390cc5f9ef26896ba28f0e32f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Caroline’s Explorations with LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,278 +119,101 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Caroline’s Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Finding Philly’s Hidden Gems with Gemini</h1>
+                  <div>
+        <div class="description">
+          Asking Gemini how I should make the most of my senior year in Philadelphia.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Gemini-2.5 Flash</div>
+                <div class="quarto-category">Philadelphia</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Caroline Cummings </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 19, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QmFraW5n">Baking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2hhdEdQVCUyMDU=">ChatGPT 5 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R2VtaW5pLTIuNSUyMEZsYXNo">Gemini-2.5 Flash <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R1BUNEFsbA==">GPT4All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGFuZHltYW4=">Handyman <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TG9jYWwlMjBMTE1z">Local LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TG9uZyUyMERpc3RhbmNlJTIwUnVubmluZw==">Long Distance Running <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhpbGFkZWxwaGlh">Philadelphia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXdlbi03Qg==">Qwen-7B <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwYWly">Repair <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="finding-phillys-hidden-gems-with-gemini" class="level1">
+<h1>Finding Philly’s Hidden Gems with Gemini</h1>
+<p>As I approach the end of my college career in Philadelphia, I’ve realized that while I’ve seen the major tourist highlights, there’s so much more to this city. I’ve walked past the Liberty Bell, admired the art at the PMA, and gotten lost in the mosaics of the Magic Gardens. But with only a few months left, I wanted to go beyond the postcard destinations and discover the unique, lesser-known spots that make Philly so special. So, I turned to an unconventional source for recommendations: an AI assistant named Gemini.</p>
+<section id="why-ask-gemini-2.5-flash" class="level2">
+<h2 class="anchored" data-anchor-id="why-ask-gemini-2.5-flash">Why Ask Gemini 2.5 Flash?</h2>
+<p>A search for “Philly hidden gems” on Google yields countless articles, but they can be repetitive and sometimes feature places that are now quite popular. I wanted a curated list that took into account a massive amount of data and filter it based on my specific criteria—namely, that I’m a college student looking for unique experiences. I also wanted to see if an AI could understand the nuance of my request and provide genuinely helpful, non-obvious suggestions.</p>
+<section id="the-ais-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="the-ais-recommendations">The AI’s Recommendations</h3>
+<p>Gemini’s response was a pleasant surprise. It didn’t just rattle off a list of places; it categorized them into “Museums &amp; Cultural Gems,” “Parks &amp; Outdoor Spaces,” and “Unique Experiences.” This structure made the information easy to digest and prioritize.</p>
+<p><img src="philly_must_go_files/figure-html/9614bc40-e2b6-4613-98b4-ab21a0760ba1-1-e20e2361-f536-48ff-988e-6a1a181c6166.png" class="img-fluid"></p>
+<hr>
+<section id="museums-cultural-gems" class="level4">
+<h4 class="anchored" data-anchor-id="museums-cultural-gems">Museums &amp; Cultural Gems</h4>
+<p>The Mütter Museum: For something truly unique, this is a must-see. Located in the College of Physicians of Philadelphia, this museum is a fascinating and sometimes macabre collection of medical oddities, anatomical specimens, and antique medical instruments. It’s a journey into the history of medicine that is unlike any other museum experience.</p>
+<p>The Barnes Foundation: While the PMA is a staple, the Barnes Foundation offers a different kind of art experience. It houses one of the world’s most significant collections of Impressionist, Post-Impressionist, and early Modern paintings, displayed exactly as Dr.&nbsp;Barnes arranged them. It’s an intimate and visually stunning collection.</p>
+<p>Eastern State Penitentiary: A popular spot, but if you haven’t been, it’s a powerful and unique experience. This historic former prison is a hauntingly beautiful ruin with a rich history, including housing famous criminals like Al Capone. The audio tour provides an excellent and in-depth look at the prison’s past.</p>
+<p>Shofuso Japanese House and Garden: Tucked away in Fairmount Park, this is a beautiful and serene escape from the city. The traditional 17th-century style Japanese house and its tranquil garden, complete with a koi pond and waterfall, offer a peaceful and reflective experience. It’s particularly stunning in the spring and fall.</p>
+<p>Wagner Free Institute of Science: This museum is a perfectly preserved example of a Victorian-era natural history museum. The exhibits, which include over 100,000 specimens of fossils, minerals, and taxidermy, are displayed in their original wood and glass cases. It’s a step back in time and a fantastic hidden gem.</p>
+</section>
+<section id="parks-outdoor-spaces" class="level4">
+<h4 class="anchored" data-anchor-id="parks-outdoor-spaces">Parks &amp; Outdoor Spaces</h4>
+<p>Bartram’s Garden: As the oldest surviving botanical garden in North America, this is a beautiful and historic spot on the banks of the Schuylkill River. It’s a perfect place for a walk, a picnic, and to learn about the history of American botany.</p>
+<p>The Rail Park: Philadelphia’s version of New York’s High Line, this is an elevated park built on a former train line. It’s a great spot for a walk with unique views of the city’s post-industrial landscape.</p>
+<p>Cira Green: A park on top of a parking garage. It’s a great spot to relax, have a picnic, and enjoy a unique and free view of the city skyline, especially at sunset.</p>
+<p>Laurel Hill Cemetery: While a cemetery might seem like an unusual suggestion, this is a 78-acre National Historic Landmark and the nation’s second oldest cemetery. It’s a beautiful, sprawling park with incredible Victorian-era monuments and stunning views of the Schuylkill River.</p>
+</section>
+<section id="unique-experiences" class="level4">
+<h4 class="anchored" data-anchor-id="unique-experiences">Unique Experiences</h4>
+<p>Bok Bar: If it’s the right season (April to October), head to the top of the former Bok Vocational High School in South Philly. This seasonal bar offers an incredible rooftop view of the city skyline and is a great spot to grab a drink and hang out with friends.</p>
+<p>South Street Headhouse District: You’ve been to the Magic Gardens, but explore the rest of the neighborhood. South Street is known for its eclectic shops, diverse restaurants, and vibrant murals. It’s a great place to wander and people-watch.</p>
+<p>The Italian Market: America’s oldest outdoor market. The street is a feast for the senses, with vendors selling fresh produce, meats, cheeses, and a variety of Italian and other ethnic foods. It’s a bustling and authentic Philadelphia experience.</p>
+<p>Walk or Bike the Schuylkill River Trail: The Schuylkill Banks Boardwalk offers a beautiful path over the water with a unique perspective of the city. You can walk, run, or bike for miles and explore different parts of the city’s riverfront.</p>
+<p>Explore Local Neighborhoods: Spend some time wandering through neighborhoods like Fishtown for its vibrant arts and music scene, East Passyunk for its amazing food, or Queen Village for its charming, historic streets.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="my-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="my-verdict">My Verdict</h2>
+<p>The recommendations were not only accurate but also thoughtfully tailored to my request. It provided a list that delved into the more authentic, local-centric experiences that I was looking for. Its ability to suggest a range of activities, from the macabre to the serene, and from hidden museums to vibrant neighborhoods, shows that it can synthesize information in a way that’s genuinely useful.</p>
+<p>Although I had already visited quite a few places on this list, there are plenty of options to choose from that I have not been to before like the Mütter Museum or the Barnes Foundation, Shofuso Japanese House and Garden or the Rail Park.</p>
+<p>I now have a fantastic itinerary for my last few months, and I’m looking forward to crossing these unique spots off my Philadelphia bucket list.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TG9jYWwlMjBMTE1zJTJDUXdlbi03Qg==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
-<div class="thumbnail"><a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_spanish_with_qwen/translation_task_files/figure-html/fd94a829-0d76-4796-944e-3b8a29db34a4-1-05501cd8-c7a2-4191-bbe6-7eeef8b6a6d8.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">Trying DeepSeek-R1-Distill-Qwen-7B: A Tiny Spanish Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9jYWwlMjBMTE1z'); return false;">Local LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXdlbi03Qg=='); return false;">Qwen-7B</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-<p>Evaluating the translation behavior of a local LLM.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0dlbWluaS0yLjUlMjBGbGFzaCUyQ1BoaWxhZGVscGhpYQ==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="946">
-<div class="thumbnail"><a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/006_philly_spots/philly_must_go_files/figure-html/9614bc40-e2b6-4613-98b4-ab21a0760ba1-1-e20e2361-f536-48ff-988e-6a1a181c6166.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">Finding Philly’s Hidden Gems with Gemini</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2VtaW5pLTIuNSUyMEZsYXNo'); return false;">Gemini-2.5 Flash</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGhpbGFkZWxwaGlh'); return false;">Philadelphia</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-<p>Asking Gemini how I should make the most of my senior year in Philadelphia.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TG9jYWwlMjBMTE1zJTJDR1BUNEFsbA==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
-<div class="thumbnail"><a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_localLLMs/localLLMS_files/figure-html/9343b5e6-ca13-4d12-b997-640a59b12252-1-af31ec24-8075-43e0-b094-2fc905b32428.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_localLLMs/localLLMS.html" class="no-external">Getting Started with GPT4All</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9jYWwlMjBMTE1z'); return false;">Local LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R1BUNEFsbA=='); return false;">GPT4All</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-<p>Downloading and testing local LLMs on GPT4All app.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0NoYXRHUFQlMjA1JTJDUmVwYWlyJTJDSGFuZHltYW4=" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1758341355322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
-<div class="thumbnail"><a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_handyman/toilet_repair_files/figure-html/cec3764c-85e1-4338-a904-b17c3d764f52-1-fe1ce199-7f9c-4ab4-b9e0-505116982eaa.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_handyman/toilet_repair.html" class="no-external">Asking Chat how to fix a toilet</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwYWly'); return false;">Repair</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGFuZHltYW4='); return false;">Handyman</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-<p>Testing how well ChatGPT can identify a small appliance problem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ0xvbmclMjBEaXN0YW5jZSUyMFJ1bm5pbmclMkNDaGF0R1BUJTIwNQ==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758341355321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="972">
-<div class="thumbnail"><a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">Prompting ChatGPT for marathon training plan</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9uZyUyMERpc3RhbmNlJTIwUnVubmluZw=='); return false;">Long Distance Running</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-<p>How do you get LLMs to help you plan your training</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ0Jha2luZyUyQ0NoYXRHUFQlMjA1" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758341355321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="457">
-<div class="thumbnail"><a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_baking_recipes/baking_blog_files/figure-html/5cec2c5d-0c3c-4bb9-a752-a45897196b0f-1-7c1f3467-f089-4576-97fb-03be50383456.jpeg" alt="brownie_pan.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">Giving ChatGPT Ingredients for a Baking Recipe</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmFraW5n'); return false;">Baking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-<p>Testing how well ChatGPT can chef.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758341355320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

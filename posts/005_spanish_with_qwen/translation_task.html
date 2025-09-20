@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Caroline Cummings">
+<meta name="dcterms.date" content="2025-09-19">
+<meta name="description" content="Evaluating the translation behavior of a local LLM.">
 
-<title>Caroline’s Explorations with LLMs</title>
+<title>Trying DeepSeek-R1-Distill-Qwen-7B: A Tiny Spanish Test – Caroline’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33486d6390cc5f9ef26896ba28f0e32f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-33486d6390cc5f9ef26896ba28f0e32f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Caroline’s Explorations with LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,278 +119,84 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Caroline’s Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Trying DeepSeek-R1-Distill-Qwen-7B: A Tiny Spanish Test</h1>
+                  <div>
+        <div class="description">
+          Evaluating the translation behavior of a local LLM.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Local LLMs</div>
+                <div class="quarto-category">Qwen-7B</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Caroline Cummings </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 19, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="QmFraW5n">Baking <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2hhdEdQVCUyMDU=">ChatGPT 5 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R2VtaW5pLTIuNSUyMEZsYXNo">Gemini-2.5 Flash <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R1BUNEFsbA==">GPT4All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGFuZHltYW4=">Handyman <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(5)</span></div><div class="category" data-category="TG9jYWwlMjBMTE1z">Local LLMs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TG9uZyUyMERpc3RhbmNlJTIwUnVubmluZw==">Long Distance Running <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhpbGFkZWxwaGlh">Philadelphia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UXdlbi03Qg==">Qwen-7B <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVwYWly">Repair <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="trying-deepseek-r1-distill-qwen-7b-a-tiny-spanish-test" class="level1">
+<h1>Trying DeepSeek-R1-Distill-Qwen-7B: A Tiny Spanish Test</h1>
+<p>I installed GPT4All and tried <strong>DeepSeek-R1-Distill-Qwen-7B</strong> with a minimal exchange to see if it would follow a strict translation instruction in Spanish. I was interested in testing the multilingual knowledge of this model which I read it was pretty good at.</p>
+<section id="conversation" class="level2">
+<h2 class="anchored" data-anchor-id="conversation">Conversation</h2>
+<p><img src="translation_task_files/figure-html/fd94a829-0d76-4796-944e-3b8a29db34a4-1-05501cd8-c7a2-4191-bbe6-7eeef8b6a6d8.png" class="img-fluid"></p>
+<p>This model thought for 53 seconds! One thing I thought was cool about using this model was that it provided the chain-of-thought reasoning for this response and what it was doing for those 53 seconds. I think when compared to a cloud-based LLM, like ChatGPT 5, it was MUCH slower. However, still fairly accurate for this translation task.&nbsp;</p>
+<hr>
+</section>
+<section id="how-it-did" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-did">How it did</h2>
+<p><strong>Core instruction:</strong> translate to English while <strong>preserving names and numbers</strong> (I also care about keeping 24-hour time if the source uses it, and preserving accents).</p>
+<p><strong>What went well</strong></p>
+<ul>
+<li>Kept the date <strong>3</strong> and the room number <strong>2</strong>.</li>
+<li>Natural English, clear and readable.</li>
+</ul>
+<p><strong>What to improve</strong></p>
+<ul>
+<li>Dropped the accent in <strong>García</strong> and wavered between “room” vs “hall” without being asked.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="verdict" class="level1">
+<h1>Verdict</h1>
+<p><strong>DeepSeek-R1-Distill-Qwen-7B</strong> handled the meaning well and produced clean English, but it also unexpectedly reformatted time and normalizing terms. When format matters (dates, 24-hour times, diacritics), I would likely tighten the prompt with explicit constraints and ask for a single-line answer.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TG9jYWwlMjBMTE1zJTJDUXdlbi03Qg==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355332" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
-<div class="thumbnail"><a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/005_spanish_with_qwen/translation_task_files/figure-html/fd94a829-0d76-4796-944e-3b8a29db34a4-1-05501cd8-c7a2-4191-bbe6-7eeef8b6a6d8.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">Trying DeepSeek-R1-Distill-Qwen-7B: A Tiny Spanish Test</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9jYWwlMjBMTE1z'); return false;">Local LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXdlbi03Qg=='); return false;">Qwen-7B</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-<p>Evaluating the translation behavior of a local LLM.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_spanish_with_qwen/translation_task.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0dlbWluaS0yLjUlMjBGbGFzaCUyQ1BoaWxhZGVscGhpYQ==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355335" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="946">
-<div class="thumbnail"><a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/006_philly_spots/philly_must_go_files/figure-html/9614bc40-e2b6-4613-98b4-ab21a0760ba1-1-e20e2361-f536-48ff-988e-6a1a181c6166.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">Finding Philly’s Hidden Gems with Gemini</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2VtaW5pLTIuNSUyMEZsYXNo'); return false;">Gemini-2.5 Flash</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGhpbGFkZWxwaGlh'); return false;">Philadelphia</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-<p>Asking Gemini how I should make the most of my senior year in Philadelphia.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_philly_spots/philly_must_go.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TG9jYWwlMjBMTE1zJTJDR1BUNEFsbA==" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1758341355329" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
-<div class="thumbnail"><a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_localLLMs/localLLMS_files/figure-html/9343b5e6-ca13-4d12-b997-640a59b12252-1-af31ec24-8075-43e0-b094-2fc905b32428.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_localLLMs/localLLMS.html" class="no-external">Getting Started with GPT4All</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9jYWwlMjBMTE1z'); return false;">Local LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('R1BUNEFsbA=='); return false;">GPT4All</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-<p>Downloading and testing local LLMs on GPT4All app.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_localLLMs/localLLMS.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0NoYXRHUFQlMjA1JTJDUmVwYWlyJTJDSGFuZHltYW4=" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1758341355322" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
-<div class="thumbnail"><a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_handyman/toilet_repair_files/figure-html/cec3764c-85e1-4338-a904-b17c3d764f52-1-fe1ce199-7f9c-4ab4-b9e0-505116982eaa.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_handyman/toilet_repair.html" class="no-external">Asking Chat how to fix a toilet</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVwYWly'); return false;">Repair</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGFuZHltYW4='); return false;">Handyman</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-<p>Testing how well ChatGPT can identify a small appliance problem.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_handyman/toilet_repair.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ0xvbmclMjBEaXN0YW5jZSUyMFJ1bm5pbmclMkNDaGF0R1BUJTIwNQ==" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758341355321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="972">
-<div class="thumbnail"><a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">Prompting ChatGPT for marathon training plan</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TG9uZyUyMERpc3RhbmNlJTIwUnVubmluZw=='); return false;">Long Distance Running</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-<p>How do you get LLMs to help you plan your training</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_marathon_plan/marathon_plan.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ0Jha2luZyUyQ0NoYXRHUFQlMjA1" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758341355321" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="457">
-<div class="thumbnail"><a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_baking_recipes/baking_blog_files/figure-html/5cec2c5d-0c3c-4bb9-a752-a45897196b0f-1-7c1f3467-f089-4576-97fb-03be50383456.jpeg" alt="brownie_pan.jpeg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">Giving ChatGPT Ingredients for a Baking Recipe</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QmFraW5n'); return false;">Baking</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2hhdEdQVCUyMDU='); return false;">ChatGPT 5</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-<p>Testing how well ChatGPT can chef.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_baking_recipes/baking_blog.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Caroline Cummings
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758341355320" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
