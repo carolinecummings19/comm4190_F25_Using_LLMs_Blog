@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/007_offline_lookup/offline_LLM.html",
+      "/posts/008_mental_health_check/mental_health_chat.html",
       "/posts/006_philly_spots/philly_must_go.html",
       "/posts/005_spanish_with_qwen/translation_task.html",
       "/posts/004_localLLMs/localLLMS.html",
