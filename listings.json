@@ -2,12 +2,13 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/005_spanish_with_qwen/translation_task.html",
+      "/posts/007_offline_lookup/offline_LLM.html",
       "/posts/006_philly_spots/philly_must_go.html",
+      "/posts/005_spanish_with_qwen/translation_task.html",
       "/posts/004_localLLMs/localLLMS.html",
       "/posts/003_handyman/toilet_repair.html",
-      "/posts/001_marathon_plan/marathon_plan.html",
       "/posts/002_baking_recipes/baking_blog.html",
+      "/posts/001_marathon_plan/marathon_plan.html",
       "/posts/000_test_post/index.html"
     ]
   }
