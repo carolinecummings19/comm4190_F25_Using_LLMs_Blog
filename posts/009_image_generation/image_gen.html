@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Caroline Cummings">
-<meta name="dcterms.date" content="2025-09-24">
-<meta name="description" content="Can ChatGPT 5.0 be a better therapist than Woebot?">
+<meta name="dcterms.date" content="2025-09-25">
+<meta name="description" content="Comparing Image Generation between Gemini 2.5 Flash and Flux.1-dev.">
 
-<title>Comparing ChatGPT 5.0 with a Mental Health LLM – Caroline’s Explorations with LLMs</title>
+<title>Testing Two AI Art Models: Gemini vs.&nbsp;Flux.1-dev – Caroline's Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,16 +120,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Comparing ChatGPT 5.0 with a Mental Health LLM</h1>
+      <h1 class="title">Testing Two AI Art Models: Gemini vs.&nbsp;Flux.1-dev</h1>
                   <div>
         <div class="description">
-          Can ChatGPT 5.0 be a better therapist than Woebot?
+          Comparing Image Generation between Gemini 2.5 Flash and Flux.1-dev.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Woebot</div>
-                <div class="quarto-category">ChatGPT 5.0</div>
+                <div class="quarto-category">Image generation</div>
+                <div class="quarto-category">Gemini 2.5 Flash</div>
+                <div class="quarto-category">Qwen Image</div>
               </div>
                   </div>
   </div>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 24, 2025</p>
+        <p class="date">September 25, 2025</p>
       </div>
     </div>
     
@@ -166,24 +166,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I have heard of some of my friends using ChatGPT as a tool to talk to and vent their feelings. So, I was already under the assumptions that people were using LLMs as therapists.</p>
-<p>In my book <em>Superagency</em>, I was excited to read about how there are models being built specifically as therapists. However, Reid Hoffman highlights the failure of the specialized LLM, Woebot, to be emotionally attuned. Specifically, he gives this example:</p>
-<pre><code>Woebot: Okay, want to tell me more about what’s going on?
-
-User: I’m feeling weird. It’s like I’m empty inside. When I look at the faces of my friends and family, I feel like they are empty as well. That’s why we cannot connect with each other. There’s nothing to hold on to.
-
-Woebot: Sounds like you are dealing with feeling low…</code></pre>
-<p>That seemed a bit crass. In my experience, I thought of ChatGPT to be more adept so I wanted to test that same conversation with the 5.0 version to see if it responded in a similar way.</p>
-<hr>
-<p><strong>User:</strong> I’m feeling weird. It’s like I’m empty inside. When I look at the faces of my friends and family, I feel like they are empty as well. That’s why we cannot connect with each other. There’s nothing to hold on to.</p>
-<p><strong>ChatGPT:</strong> That sounds really heavy—and lonely. You’re noticing not only a kind of emptiness in yourself, but also projecting that sense onto the people around you, which must make it feel even harder to connect. Almost like everyone’s faces become hollow and there’s no anchor, no solid ground to hold onto.</p>
-<p>I want you to know you’re not alone in feeling that way, even if it feels isolating. Sometimes those kinds of feelings can come with exhaustion, depression, or even just moments of disconnection where things lose their color and meaning.</p>
-<p>I’m here with you in this moment. Can I ask—when did you first start noticing this sense of emptiness?</p>
-<p><img src="mental_health_chat_files/figure-html/5a4d1b95-66f7-424c-87ec-393fa506af53-1-a3af978f-ff7b-40d6-98c3-981cc6667151.png" class="img-fluid"></p>
-<hr>
-<p>I thought this was a well-crafted response.</p>
+<section id="testing-two-ai-art-models-gemini-vs.-qwen-image" class="level1">
+<h1>Testing Two AI Art Models: Gemini vs.&nbsp;Qwen Image</h1>
+<p>I tried running the same prompts through two different image generation models — Google’s Gemini 2.5 Flash and the open-source Flux.1-dev — just to see how they’d interpret the same ideas.</p>
+<p>For the “cozy café on a rainy street corner” prompt, Gemini added people into the scene. They looked a little animated, almost hazy, which gave it a softer, storybook vibe. Flux.1-dev went the opposite direction: darker streets, no people, and warm glowing lights from inside the café. It felt moodier, maybe more atmospheric.</p>
+<p><img src="image_gen_files/figure-html/0acc2ec9-2abd-4307-ae7e-89b60a434912-1-4caae6d9-a75a-4959-af32-f5caae9a3ae0.png" class="img-fluid" style="width:40.0%"> <img src="image_gen_files/figure-html/0acc2ec9-2abd-4307-ae7e-89b60a434912-2-f3addf89-95fd-413a-b915-ef0e870ead98.jpeg" class="img-fluid" style="width:40.0%"></p>
+<p>Then I tried “a sunflower field in Van Gogh style.” Here Gemini really nailed the painterly feel — thick strokes, swirly textures, very recognizable Van Gogh energy. Flux.1-dev leaned more cartoon-like, but still clearly borrowed from Van Gogh’s palette and angle.</p>
+<p><img src="image_gen_files/figure-html/16988c0a-b364-41e5-80e3-dc60c7c3745e-1-2f396e58-8d00-4fdc-9b3d-52824afecbab.png" class="img-fluid" style="width:40.0%"> <img src="image_gen_files/figure-html/16988c0a-b364-41e5-80e3-dc60c7c3745e-2-cec10f18-7f37-40bd-9860-9b776bd6cd12.jpeg" class="img-fluid" style="width:40.0%" alt="getimg_ai_img-XuwzGsdCDAH5Edlf5OZlZ.jpeg"></p>
+<p>It’s worth noting that Flux.1-dev is open source, which means it’s more hackable, customizable, and shaped by the community. Gemini feels a bit more polished and accurate out of the box, but less flexible under the hood. Together, the differences highlight what’s exciting (and sometimes unpredictable) about experimenting with AI art tools.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
