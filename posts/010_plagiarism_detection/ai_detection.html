@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Caroline Cummings">
-<meta name="dcterms.date" content="2025-09-10">
-<meta name="description" content="How do you get LLMs to help you plan your training">
+<meta name="dcterms.date" content="2025-10-01">
+<meta name="description" content="Which model is the least ‘AI’ sounding?">
 
-<title>Prompting ChatGPT for marathon training plan – Caroline’s Explorations with LLMs</title>
+<title>Comparing AI Detection Results on Different Models – Caroline’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,16 +120,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Prompting ChatGPT for marathon training plan</h1>
+      <h1 class="title">Comparing AI Detection Results on Different Models</h1>
                   <div>
         <div class="description">
-          How do you get LLMs to help you plan your training
+          Which model is the least ‘AI’ sounding?
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Long Distance Running</div>
-                <div class="quarto-category">ChatGPT 5</div>
+                <div class="quarto-category">ChatGPT 5.0</div>
+                <div class="quarto-category">Gemini 2.5 Flash</div>
+                <div class="quarto-category">Qwen-7B</div>
               </div>
                   </div>
   </div>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 10, 2025</p>
+        <p class="date">October 1, 2025</p>
       </div>
     </div>
     
@@ -166,212 +166,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="my-new-running-coach-chatgpt-5" class="level1">
-<h1>My New Running Coach: ChatGPT 5</h1>
-<section id="asking-chatgpt-5-to-make-a-2-month-marathon-training-plan-for-the-philadelphia-marathon." class="level2">
-<h2 class="anchored" data-anchor-id="asking-chatgpt-5-to-make-a-2-month-marathon-training-plan-for-the-philadelphia-marathon.">Asking ChatGPT 5 to make a 2 month marathon training plan for the Philadelphia Marathon.</h2>
-<section id="why-i-tried-chatgpt-5-for-marathon-training" class="level3">
-<h3 class="anchored" data-anchor-id="why-i-tried-chatgpt-5-for-marathon-training">Why I Tried ChatGPT 5 for Marathon Training</h3>
-<p>I’ve been running consistently, but I’ve never had a formal marathon plan tailored to my goals and timeframe. Hiring a coach can be expensive, and online plans are usually one-size-fits-all.<br>
-So, I decided to experiment: what if ChatGPT 5 could be my running coach?</p>
-</section>
-<section id="formulating-an-effective-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="formulating-an-effective-prompt">Formulating an Effective Prompt</h3>
-<p>I wanted to have the final plan customized for me based on my current fitness and lifestlye. I started off by asking ChatGPT 5 what sort of information it wanted from me in order to make my training plan.</p>
+<section id="comparing-ai-detection-results-on-chatgpt-5.0-gemini-2.5-flash-and-local-deepseek-r1-distill-qwen-7b." class="level1">
+<h1>Comparing AI Detection Results on ChatGPT 5.0, Gemini 2.5 Flash, and local DeepSeek-R1-Distill-Qwen-7B.</h1>
+<p>I gave the 3 models the same prompt: <code>Explain how photosynthesis works in plants (3-5 sentences).</code></p>
+<p>I then used zeroGPT.com to analyze each of their responses. The results were as follows:</p>
 <hr>
-<p><strong>User:</strong> I want you to be my running coach to help me train for the 2025 Philadelphia Marathon which is in 2 months. Can you give me a list of questions that you would ask me in order to formulate a customized training plan for me?</p>
+<p>ChatGPT 5.0:</p>
+<pre><code>Photosynthesis is the process by which plants use sunlight to convert carbon dioxide and water into glucose (sugar) and oxygen. This takes place mainly in the chloroplasts of plant cells, where the green pigment chlorophyll absorbs light energy. The light energy powers chemical reactions that split water molecules, releasing oxygen as a byproduct. The glucose made provides energy and building material for the plant’s growth and survival.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/bf6d64e8-294f-4077-a777-81418aecc5be-1-35ad3413-148b-4095-a3dd-bcbe5707edb7.png" class="img-fluid" style="width:40.0%"></p>
+<p>Gemini 2.5 Flash:</p>
+<pre><code>Photosynthesis is the process by which plants convert light energy into chemical energy to create their own food. Plants absorb water through their roots and carbon dioxide (CO^2) through tiny pores in their leaves called stomata. Using chlorophyll to capture energy from sunlight, these raw materials are transformed into glucose (a sugar for energy) and oxygen (O^2). The oxygen is then released as a byproduct, making the process vital for life on Earth.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/37a1f91e-550c-48bf-b863-b1bf28818a6b-1-1c4effc9-f349-49ad-b3e0-c8ccccec54a5.png" class="img-fluid" style="width:40.0%"></p>
+<p>DeepSeek-R1-Distill-Qwen-7B (did not keep it 3-5 sentences):</p>
+<pre><code>Photosynthesis is a process where plants convert sunlight into chemical energy to fuel their growth and survival. This occurs primarily in chloroplasts, which contain chlorophyll giving them their green color. The process consists of two main stages: the light-dependent reactions and the Calvin cycle.
+In the light-dependent reactions (PSII), water molecules are split using ATP synthase, releasing oxygen as a byproduct. This step also produces ATP and NADPH, energy carriers essential for the next stage.
+The Calvin cycle (PC) involves fixing carbon dioxide into organic compounds through enzyme-driven reactions in the stroma of chloroplasts. Using ATP and NADPH, CO2 is converted into glucose, providing plants with the energy they need to grow and develop. This process ensures that plants can synthesize their own food using sunlight as an energy source.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/e5b87610-ab1d-4490-b32f-c08848c64d1d-1-f34bd9ce-76f5-4286-9c9e-72648f0e4b20.png" class="img-fluid" style="width:40.0%"></p>
 <hr>
-<p><strong>ChatGPT:</strong> Perfect! To create a <strong>customized 2-month training plan</strong> for the 2025 Philadelphia Marathon, I’d want to get a full picture of your background, goals, lifestyle, and constraints. Here’s a list of questions I’d ask you as your “coach”:</p>
-<p>🏃 Running Background</p>
-<ol type="1">
-<li>What is your current weekly mileage?</li>
-<li>What’s the longest run you’ve completed recently?</li>
-<li>Have you ever run a marathon before? If so, what was your time/experience like?</li>
-<li>Do you have recent race times for shorter distances (5K, 10K, half marathon)?</li>
-<li>Do you typically run on roads, tracks, or trails?</li>
-</ol>
-<p>🎯 Goals &amp; Expectations</p>
-<ol start="6" type="1">
-<li>What is your primary goal for the Philadelphia Marathon — finish strong, hit a specific time, or qualify for something (e.g., Boston)?</li>
-<li>Do you have a target pace in mind for race day?</li>
-<li>What’s more important to you: speed, endurance, or simply enjoying the experience?</li>
-</ol>
-<p>🏋️ Strength &amp; Cross Training</p>
-<ol start="9" type="1">
-<li>Do you currently do strength training or cross training (cycling, swimming, yoga, etc.)?</li>
-<li>Are you open to incorporating strength/mobility sessions into your plan?</li>
-</ol>
-<p>⏰ Schedule &amp; Lifestyle</p>
-<ol start="11" type="1">
-<li>How many days per week can you realistically commit to running?</li>
-<li>Do you prefer morning, afternoon, or evening runs?</li>
-<li>Do you have any upcoming travel, work, or school commitments that may affect training?</li>
-</ol>
-<p>🩺 Health &amp; Injury History</p>
-<ol start="14" type="1">
-<li>Have you had any past or current injuries (knees, shins, ankles, hips, etc.)?</li>
-<li>Do you have any health concerns I should keep in mind (e.g., asthma, anemia, nutrition issues)?</li>
-</ol>
-<p>🥗 Fueling &amp; Recovery</p>
-<ol start="16" type="1">
-<li>How’s your nutrition and hydration routine right now?</li>
-<li>Do you have experience practicing fueling (gels, chews, hydration) on long runs?</li>
-<li>How many hours of sleep do you typically get per night?</li>
-</ol>
-<p>🌦 Race-Day Specifics</p>
-<ol start="19" type="1">
-<li>Have you run in Philadelphia before, or are you familiar with the marathon course?</li>
-<li>Do you have gear preferences (shoes, watch, hydration belt/vest)?</li>
-</ol>
-<p>💡 Personal Motivation</p>
-<ol start="21" type="1">
-<li>What motivates you most: following a structured plan, listening to your body, or running with others?</li>
-<li>What do you hope to get out of this marathon beyond just finishing (confidence, health, community, fun)?</li>
-</ol>
+<p>Just by copy and pasting the outputs from the models, the AI detector correctly identified each of the responses as 100% AI generated. However, I wanted to see what it would say about other likely non-AI generated responses. I went to Wikipedia and to National Geographic and copied the first couple lines of the article on photosynthesis. (https://en.wikipedia.org/wiki/Photosynthesis and https://education.nationalgeographic.org/resource/photosynthesis/).</p>
+<p>I also went to Quora and grabbed an explanation from 12 years ago (https://www.quora.com/What-is-photosynthesis-and-how-does-it-work).</p>
 <hr>
-<p>It gave me 22 questions to answer! I answered each of them to the best of my ability with hopes of having a very in-depth and tailored training plan.</p>
-</section>
-<section id="the-plan-chatgpt-gave-me" class="level3">
-<h3 class="anchored" data-anchor-id="the-plan-chatgpt-gave-me">The Plan ChatGPT Gave Me</h3>
-<p><strong>8-Week Philadelphia Marathon Training Plan</strong></p>
-<p><em>(Starting Monday, Sept 15, 2025 → Race Day Sunday, Nov 23, 2025)</em></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 14%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>M</th>
-<th>T</th>
-<th>W</th>
-<th>Th</th>
-<th>F</th>
-<th>S</th>
-<th>S</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1 (Sept 15)</td>
-<td>Rest / XT</td>
-<td>6 mi easy</td>
-<td>5 mi w/ strides</td>
-<td>6 mi @ MP (8:00–8:15)</td>
-<td>Rest</td>
-<td>4 mi shakeout</td>
-<td><strong>Half Marathon Race</strong></td>
-</tr>
-<tr class="even">
-<td>2 (Sept 22)</td>
-<td>Rest</td>
-<td><strong>14 mi long run</strong></td>
-<td>6 mi aerobic</td>
-<td>6 x 1k @ 10K pace</td>
-<td>Rest</td>
-<td>6 mi easy</td>
-<td>5 mi recovery</td>
-</tr>
-<tr class="odd">
-<td>3 (Sept 29)</td>
-<td>Rest</td>
-<td>7 mi easy</td>
-<td>5 mi tempo (HM pace)</td>
-<td>7 mi aerobic</td>
-<td>Rest</td>
-<td>5 mi easy</td>
-<td>16 mi long run (last 4 @ MP)</td>
-</tr>
-<tr class="even">
-<td>4 (Oct 6)</td>
-<td>Rest</td>
-<td>8 mi aerobic</td>
-<td>8 x 800m @ 10K pace</td>
-<td>6 mi easy</td>
-<td>Rest</td>
-<td>6 mi easy</td>
-<td>18 mi long run</td>
-</tr>
-<tr class="odd">
-<td>5 (Oct 13)</td>
-<td>Rest</td>
-<td>7 mi easy</td>
-<td>6 mi tempo (HM pace)</td>
-<td>8 mi aerobic</td>
-<td>Rest</td>
-<td>6 mi easy</td>
-<td>20 mi long run (last 6 @ MP)</td>
-</tr>
-<tr class="even">
-<td>6 (Oct 20)</td>
-<td>Rest</td>
-<td><strong>18 mi long run (last 5 @ MP)</strong></td>
-<td>6 mi aerobic</td>
-<td>10 x 400m @ 5K pace</td>
-<td>Rest</td>
-<td>6 mi easy</td>
-<td>5 mi recovery</td>
-</tr>
-<tr class="odd">
-<td>7 (Oct 27)</td>
-<td>Rest</td>
-<td>7 mi easy</td>
-<td>5 mi tempo (HM pace)</td>
-<td>6 mi aerobic</td>
-<td>Rest</td>
-<td>5 mi easy</td>
-<td>14 mi long run</td>
-</tr>
-<tr class="even">
-<td>8 (Nov 3)</td>
-<td>Rest</td>
-<td><strong>10 mi long run</strong></td>
-<td>6 mi aerobic</td>
-<td>6 x 800m @ 10K pace</td>
-<td>Rest</td>
-<td>4 mi shakeout</td>
-<td>5 mi recovery</td>
-</tr>
-<tr class="odd">
-<td>9 (Nov 10)</td>
-<td>Rest</td>
-<td>5 mi easy</td>
-<td>4 mi tempo</td>
-<td>5 mi aerobic</td>
-<td>Rest</td>
-<td>4 mi shakeout</td>
-<td>8 mi long run</td>
-</tr>
-<tr class="even">
-<td>10 (Nov 17)</td>
-<td>Rest</td>
-<td>4 mi easy</td>
-<td>3 mi w/ strides</td>
-<td>3 mi easy</td>
-<td>Rest</td>
-<td>2 mi shakeout</td>
-<td><strong>RACE DAY! 26.2 mi</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key:</strong> - <strong>MP = Marathon Pace (8:00–8:15/mi)</strong> - <strong>Tempo = Half Marathon pace (~7:55–8:00/mi)</strong> - <strong>Intervals = 10K pace (~7:40–7:50/mi) or 5K pace (~6:55–7:05/mi)</strong> - Easy/aerobic runs = comfortable conversational pace (~9:00–9:30/mi) - Long runs include fueling practice + hydration - Rest = rest day or optional cross training (bike, swim, yoga)</p>
-</section>
-<section id="final-thoughts" class="level3">
-<h3 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h3>
-<p>This experiment showed me how AI can make training feel more accessible.<br>
-While it won’t replace years of coaching expertise, it’s a surprisingly motivating and structured tool.<br>
-For now, ChatGPT is my new running buddy — and hopefully, it’ll help me cross the finish line in Philadelphia this fall.</p>
+<p>Wikipedia:</p>
+<pre><code>Photosynthesis is a system of biological processes by which photopigment-bearing autotrophic organisms, such as most plants, algae and cyanobacteria, convert light energy — typically from sunlight — into the chemical energy necessary to fuel their metabolism. The term photosynthesis usually refers to oxygenic photosynthesis, a process that releases oxygen as a byproduct of water splitting. Photosynthetic organisms store the converted chemical energy within the bonds of intracellular organic compounds (complex compounds containing carbon), typically carbohydrates like sugars (mainly glucose, fructose and sucrose), starches, phytoglycogen and cellulose. When needing to use this stored energy, an organism's cells then metabolize the organic compounds through cellular respiration.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/8e376a78-da78-4f43-901d-4e28ab0f3cdb-1-fde56239-ee6e-41c9-a922-3e05815797ae.png" class="img-fluid" style="width:40.0%"></p>
+<p>National Geographic:</p>
+<pre><code>Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to create oxygen and energy in the form of sugar. During photosynthesis, plants take in carbon dioxide (CO2) and water (H2O) from the air and soil. Within the plant cell, the water is oxidized, meaning it loses electrons, while the carbon dioxide is reduced, meaning it gains electrons. This transforms the water into oxygen and the carbon dioxide into glucose. The plant then releases the oxygen back into the air, and stores energy within the glucose molecules.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/b006a846-72e2-4819-942d-858f49160e6f-1-2e87058f-e019-4624-9233-672c795aaf72.png" class="img-fluid" style="width:40.0%"></p>
+<p>Quora:</p>
+<pre><code>Photosynthesis occurs in two stages. In the first stage, light-dependent reactions or light reactions capture the energy of light and use it to make the energy-storage molecules ATP (Adenosine Thiosulphate) and NADPH. During the second stage, the light-independent reactions use these products to capture and reduce carbon dioxide. Most organisms that utilize photosynthesis to produce oxygen use visible light to do so, although at least three use infrared radiation.</code></pre>
+<p>AI Detector Result:</p>
+<p><img src="ai_detection_files/figure-html/b006a846-72e2-4819-942d-858f49160e6f-2-805f6a4b-e02d-4d3d-9ff0-b146357ed09f.png" class="img-fluid" style="width:40.0%"></p>
+<hr>
+<p>Both of the articles were also classified 100% as AI-generated. I am not convinced that these articles were actually written by AI, but there is potential they were. I am very confident that the Quora answer was not AI generated, given that it was posted 12 years ago, yet the detector found that it was almost 70% AI generated.</p>
+<p>Overall, I think this AI detector may be overconfident in its detection of AI vs.&nbsp;Human. In practice, this makes them unreliable for truly distinguishing between human and machine-written content.</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

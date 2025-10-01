@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/010_plagiarism_detection/ai_detection.html",
       "/posts/009_image_generation/image_gen.html",
       "/posts/007_offline_lookup/offline_LLM.html",
       "/posts/008_mental_health_check/mental_health_chat.html",
