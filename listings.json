@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/011_nano_banana/headshot_edits.html",
       "/posts/010_plagiarism_detection/ai_detection.html",
       "/posts/009_image_generation/image_gen.html",
       "/posts/007_offline_lookup/offline_LLM.html",
