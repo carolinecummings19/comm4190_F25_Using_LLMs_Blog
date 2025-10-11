@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/012_phishing/phishing_or_not.html",
       "/posts/011_nano_banana/headshot_edits.html",
       "/posts/010_plagiarism_detection/ai_detection.html",
       "/posts/009_image_generation/image_gen.html",
