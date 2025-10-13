@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Caroline Cummings">
+<meta name="dcterms.date" content="2025-10-11">
+<meta name="description" content="How I used an LLM to spot phishing patterns in my inbox.">
 
-<title>Using Gemini 2.5 Flash to Flag Potential Spam – Caroline’s Explorations with LLMs</title>
+<title>Catching Scammy Emails with Gemini 2.5 Flash – Caroline’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -152,14 +120,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Using Gemini 2.5 Flash to Flag Potential Spam</h1>
-                      </div>
+      <h1 class="title">Catching Scammy Emails with Gemini 2.5 Flash</h1>
+                  <div>
+        <div class="description">
+          How I used an LLM to spot phishing patterns in my inbox.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Security</div>
+                <div class="quarto-category">Gemini 2.5 Flash</div>
+                <div class="quarto-category">Productivity</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Caroline Cummings </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 11, 2025</p>
+      </div>
+    </div>
     
       
     </div>
@@ -176,18 +166,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="a96b74e4-127b-47ab-bb7f-81ebd533d66c" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"Catching Scammy Emails with Gemini 2.5 Flash"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"How I used an LLM to spot phishing patterns in my inbox."</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Caroline Cummings"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"10/11/2025"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Security</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Gemini <span class="fl">2.5</span> Flash</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Productivity</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<section id="using-gemini-2.5-flash-to-flag-potential-spam" class="level1 page-columns page-full">
+<h1>Using Gemini 2.5 Flash to Flag Potential Spam</h1>
 <p>I grabbed a few sketchy-looking emails (and one that I thought was real) and asked Gemini 2.5 Flash to score them for risk and explain why. Below are the screenshots of the emails and model replies to the following prompt.</p>
 <p><strong>Prompt</strong></p>
 <pre><code>Is this likely marketing or phishing? Rate the spam/phishing risk (0–100) and list concrete indicators (domain, spelling, links, urgency). Keep response to under 150 words.</code></pre>
@@ -259,6 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I thought Gemini 2.5 Flash handled these emails impressively well. It didn’t just label messages as spam or not—it explained why in clear, structured ways that matched human reasoning. The model consistently highlighted sender-domain mismatches, urgency cues, and fake branding with accuracy, while also recognizing the actual marketing email I was surprised by how quickly it spotted red flags that even some people might overlook, making it a genuinely helpful companion for everyday digital hygiene. I did think that the first example was pretty clearly a spam/phishing email but it rated it not as highly as the other ones. Overall, I think it would be very helpful to use LLM as a checker for all emails to give warnings of why an email could be spam or a phishing attempt.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
