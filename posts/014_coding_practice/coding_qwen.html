@@ -8,7 +8,7 @@
 
 <meta name="author" content="Caroline Cummings">
 <meta name="dcterms.date" content="2025-10-22">
-<meta name="description" content="Another plane exploration.">
+<meta name="description" content="Quick test of how well DeepSeek’s Qwen-7B knows Python and Java.">
 
 <title>Testing DeepSeek-R1-Distill-Qwen-7B on Coding Skills. – Caroline’s Explorations with LLMs</title>
 <style>
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -123,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Testing DeepSeek-R1-Distill-Qwen-7B on Coding Skills.</h1>
                   <div>
         <div class="description">
-          Another plane exploration.
+          Quick test of how well DeepSeek’s Qwen-7B knows Python and Java.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -166,23 +201,94 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I wanted to test the coding skills of this local model beause I had only ever used the frontier models which are very good at coding. Similar to the tutor task, I asked the model to teach me about the comparisons of Python and Java, including writing snippets of code. I tried to stay very specific so that the model wasn’t asked for too much output because it takes a lot longer to produce it’s response then a cloud-based model.</p>
+<section id="testing-coding-skills-of-a-local-model" class="level2">
+<h2 class="anchored" data-anchor-id="testing-coding-skills-of-a-local-model">Testing Coding Skills of a Local Model</h2>
+<p>I wanted to test the coding skills of this local model because I had only ever used the frontier models, which are very good at coding. Similar to the tutor task, I asked the model to teach me about the comparisons of Python and Java, including writing snippets of code. I tried to stay very specific so that the model wasn’t asked for too much output, because it takes a lot longer to produce its response than a cloud-based model.</p>
+<hr>
+<section id="prompt-1" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-1"><strong>Prompt 1</strong></h3>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.95rem;">
 <p>I want to compare the coding languages of Python and Java. First, can you explain the differences in list implementations in the two languages?</p>
-<p>The model went over 4 key points including data storage, access time, resizing and performance, and use cases. The model only covered Python in that data storage section, stating “lists are implemented using a hash table structure” but did not compare it with Java which was a little disappointing. It stated O(1) access time for both Python and Java and threw in that the LinkedList in Java has O(n) access time but efficient insertion/deletion. It states both resize dynamically when elements exceed current capacity. It also says Java provides performance advantages because of lower-level optimizations. Finally, it dives into the use cases for each language. It highlights Python as being easy to use while Java is better when high-performance is needed.</p>
-<p>Overall, I wasn’t too impressed with its responses as it was a bit repetitive and not as robust of a response as I was hoping for</p>
-<p>I then wanted to see it write some code. I prompted:</p>
+</div>
+<hr>
+</section>
+<section id="response" class="level3">
+<h3 class="anchored" data-anchor-id="response">Response</h3>
+<p>The model went over four key points including <strong>data storage</strong>, <strong>access time</strong>, <strong>resizing and performance</strong>, and <strong>use cases</strong>.</p>
+<p>The model only covered Python in the data storage section, stating <em>“lists are implemented using a hash table structure”</em> but did not compare it with Java, which was a little disappointing.</p>
+<p>It stated <strong>O(1)</strong> access time for both Python and Java and mentioned that the <strong>LinkedList</strong> in Java has <strong>O(n)</strong> access time but efficient insertion/deletion. It also said both resize dynamically when elements exceed current capacity.</p>
+<p>It further claimed Java provides performance advantages because of lower-level optimizations. Finally, it discussed the use cases for each language — highlighting Python as being easy to use while Java is better when high performance is needed.</p>
+<p>Overall, I wasn’t too impressed with its responses as they were a bit repetitive and not as robust as I was hoping for.</p>
+<hr>
+</section>
+<section id="prompt-2" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-2"><strong>Prompt 2</strong></h3>
+<div style="background-color:#f6f8fa; border-left:4px solid #28a745; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.95rem;">
 <p>can you show me an example in each language of initializing a list [1, 2, 3, 4] and an empty list?</p>
+</div>
+<hr>
+</section>
+<section id="response-1" class="level3">
+<h3 class="anchored" data-anchor-id="response-1">Response:</h3>
+<div id="c398169b-ba15-4e68-af23-5bcbbc6a14ec" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initializing a list with elements [1, 2, 3, 4]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initializing an empty list</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>empty_list <span class="op">=</span> []</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)  <span class="co"># Output: [1, 2, 3, 4]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(empty_list)  <span class="co"># Output: []</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="900d5ab9-fccf-4ba6-8143-3c5ac588f10f" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> java.util.ArrayList<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">//</span> Initializing a <span class="bu">list</span> <span class="cf">with</span> elements {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ArrayList<span class="op">&lt;</span>Integer<span class="op">&gt;</span> myList <span class="op">=</span> new ArrayList<span class="op">&lt;&gt;</span>()<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>myList.add(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>mylist.add(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>myList.add(<span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>myList.add(<span class="dv">4</span>)<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>System.out.println(myList)<span class="op">;</span> <span class="op">//</span> Output: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">//</span> Initializing an empty <span class="bu">list</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ArrayList<span class="op">&lt;</span>Integer<span class="op">&gt;</span> emptyList <span class="op">=</span> new ArrayList<span class="op">&lt;&gt;</span>()<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>System.out.println(emptyList)<span class="op">;</span> <span class="op">//</span> Output: []</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>I was very impressed by the output. I found no typos in the code which I was worried it might have and it even included print statements for visualizing the lists if I were to run the code which the frontier models would have likely included too.</p>
-<p>I wanted to dive more into data structures and some that include lists to eventually ask it to code a more complex code block in Python and Java.</p>
+</section>
+<section id="prompt-3" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-3"><strong>Prompt 3</strong></h3>
+<div style="background-color:#f6f8fa; border-left:4px solid #f39c12; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
 <p>Now, I want you to tell me what are some use cases for lists in general (language independent). What data structures can be implemented using lists?</p>
-<p>It listed the use cases of: stroing ordered sequences, dynamic arrays, indexing and positional access, algorithms that require ordered operations, and building more complex data structures. It went into more depth for each listing a specific example like “Maintaining a sequence like user names in the order they log in” which were insightful. It also listed the more complex data structures like arrays, stacks, queues, linked lists, trees, and graphs which was what I was looking for in the answer.</p>
-<p>Additionally, it went on to provide more code snippets for each common data structure but only in Python.</p>
-<p>Finally, I asked it to implement the. same data structures in Java.</p>
-<p>Now, can you implement each of the common data structures in Java like you did in Python? Namely arrays, stacks, queues, linked lists, atrees, and graphs.</p>
-<p>It did it without using the pre-built in Java classes which was impressive. It was able to produce chunks of code that were around 50 lines (implementing a tree).</p>
-<p>Overall, I think that the distilled Qwen 7B model provided comparable outputs to the frontier models like ChatGPT and Gemini but maybe a little less robust. However, it takes much longer to get the output. The shortest time the model took to think was 38 seconds and the longest was 262 second which is over 4 minutes. Thus, I think that its a good option if you don’t have WiFi and need to study or need help on code but expect to wait quite a bit for any longer responses. Otherwise, the cloud-based models are very accurate and fast for coding.</p>
+</div>
+<hr>
+<p>It listed the use cases of: <strong>storing ordered sequences</strong>, <strong>dynamic arrays</strong>, <strong>indexing and positional access</strong>, <strong>algorithms that require ordered operations</strong>, and <strong>building more complex data structures</strong>.</p>
+<p>It went into more depth for each, listing a specific example like <em>“Maintaining a sequence like user names in the order they log in”</em>, which was insightful.</p>
+<p>It also listed the more complex data structures like <strong>arrays</strong>, <strong>stacks</strong>, <strong>queues</strong>, <strong>linked lists</strong>, <strong>trees</strong>, and <strong>graphs</strong>, which was exactly what I was looking for in the answer.</p>
+<p>Additionally, it went on to provide more code snippets for each common data structure — but only in Python.</p>
+<hr>
+</section>
+<section id="prompt-4" class="level3">
+<h3 class="anchored" data-anchor-id="prompt-4"><strong>Prompt 4</strong></h3>
+<div style="background-color:#f6f8fa; border-left:4px solid #e83e8c; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
+<p>Now, can you implement each of the common data structures in Java like you did in Python? Namely arrays, stacks, queues, linked lists, trees, and graphs.</p>
+</div>
+<hr>
+<p>It did it without using the pre-built Java classes, which was impressive. It was able to produce chunks of code that were around 50 lines (for example, when implementing a tree).</p>
+<hr>
+</section>
+<section id="overall-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="overall-reflection">🧩 <strong>Overall Reflection</strong></h3>
+<p>Overall, I think that the distilled <strong>Qwen 7B</strong> model provided comparable outputs to frontier models like <strong>ChatGPT</strong> and <strong>Gemini</strong>, though slightly less robust. However, it takes <em>much longer</em> to get the output.</p>
+<p>The shortest time the model took to respond was <strong>38 seconds</strong>, and the longest was <strong>262 seconds</strong> — over <strong>4 minutes</strong>.</p>
+<p>Thus, I think it’s a good option if you don’t have Wi-Fi and need to study or get help on code — but expect to wait quite a bit for any longer responses. Otherwise, the cloud-based models are much faster and very accurate for coding.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
