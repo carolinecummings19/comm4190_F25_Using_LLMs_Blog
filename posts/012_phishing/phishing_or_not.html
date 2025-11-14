@@ -158,22 +158,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<section id="using-gemini-2.5-flash-to-flag-potential-spam" class="level1 page-columns page-full">
+<section id="using-gemini-2.5-flash-to-flag-potential-spam" class="level1">
 <h1>Using Gemini 2.5 Flash to Flag Potential Spam</h1>
 <p>I grabbed a few sketchy-looking emails (and one that I thought was real) and asked Gemini 2.5 Flash to score them for risk and explain why. Below are the screenshots of the emails and model replies to the following prompt.</p>
 <p><strong>Prompt</strong></p>
-<pre><code>Is this likely marketing or phishing? Rate the spam/phishing risk (0–100) and list concrete indicators (domain, spelling, links, urgency). Keep response to under 150 words.</code></pre>
-<section id="example-1-free-roof-upgrade" class="level2 page-columns page-full">
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.95rem;">
+<p>Is this likely marketing or phishing? Rate the spam/phishing risk (0–100) and list concrete indicators (domain, spelling, links, urgency). Keep response to under 150 words.</p>
+</div>
+<section id="example-1-free-roof-upgrade" class="level2">
 <h2 class="anchored" data-anchor-id="example-1-free-roof-upgrade">Example 1 — “Free Roof Upgrade”</h2>
 <p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-2-5bb26a19-2553-4dc6-97cf-6d71c24b00e1.png" class="img-fluid" style="width:50.0%"></p>
 <p><strong>Response</strong></p>
-<aside style="background:#f6ffed;border:1px solid #b7eb8f;padding:10px;border-radius:10px">
+<div style="background-color:#f6f8fa; border-left:4px solid #e83e8c; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
 <p><strong>Assessment: Marketing (High Spam Risk)</strong> This email is a <strong>lead generation spam</strong> attempt, rated a <strong>65/100</strong> risk. It uses deceptive tactics to harvest personal information for sales calls, though it is not a direct phishing attack for passwords.</p>
 <p><strong>Key Indicators:</strong></p>
 <ul>
@@ -181,48 +183,14 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Urgency:</strong> The subject line (“Claim It Now!”) and language create a false sense of a time-sensitive, personalized offer.</li>
 <li><strong>Deceptive Links:</strong> Links like “Check Eligibility” and “Secure link | 100% privacy protected” are manipulative, aiming to get you to click and submit personal data.</li>
 </ul>
-<strong>Action:</strong> This is a high-risk spam that should be deleted.
-</aside>
+<p><strong>Action:</strong> This is a high-risk spam that should be deleted.</p>
+</div>
 </section>
-<section id="example-2-prime-payment-failed" class="level2 page-columns page-full">
+<section id="example-2-prime-payment-failed" class="level2">
 <h2 class="anchored" data-anchor-id="example-2-prime-payment-failed">Example 2 — “Prime Payment Failed”</h2>
 <p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-3-762bffee-015a-4ab1-bf01-894f8df95e39.png" class="img-fluid" style="width:50.0%"></p>
-<strong>Response</strong>
-<aside style="background:#f6ffed;border:1px solid #b7eb8f;padding:10px;border-radius:10px">
-<p><strong>Assessment: PHISHING (Critical Risk)</strong></p>
-<p>This is a <strong>phishing</strong> attempt, rated a high <strong>90/100</strong> risk, designed to steal your credit card details and login credentials by impersonating Sirius XM.</p>
-<p><strong>Critical Indicators:</strong></p>
-<ul>
-<li><strong>Fake Sender:</strong> The email address is random gibberish (<code>fvgvcankatx@...</code>), not an official Sirius XM address.</li>
-<li><strong>Extreme Urgency:</strong> The subject line, “<strong>Your Account… Will Be Removed Today</strong>,” pressures immediate action to prevent loss of service.</li>
-<li><strong>Deceptive Offer:</strong> It offers “90 days for FREE” to bait a click, followed by the requirement to enter credit card details for “validation.”</li>
-<li><strong>Malicious Link:</strong> The “RENEW SUBSCRIPTION NOW” button directs you to a fraudulent website to harvest your personal and financial information.</li>
-</ul>
-<strong>Action:</strong> This is highly malicious. Do <strong>not</strong> click the link and delete the email immediately.
-</aside>
-</section>
-<section id="example-3-pizza-promo" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="example-3-pizza-promo">Example 3 — “Pizza Promo”</h2>
-<p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-4-dd83a16d-09af-45d5-9b9f-64774dd5ed5c.png" class="img-fluid" style="width:50.0%"></p>
-<strong>Response</strong>
-<aside style="background:#f6ffed;border:1px solid #b7eb8f;padding:10px;border-radius:10px">
-<p><strong>Assessment: Marketing (Low Risk)</strong></p>
-<p>This is a <strong>genuine marketing</strong> email from <strong>Blaze Pizza</strong>, rated a very low <strong>10/100</strong> risk. It offers a real promotion despite being incorrectly flagged as spam.</p>
-<p><strong>Key Indicators:</strong></p>
-<ul>
-<li><strong>Legitimate Sender:</strong> The email comes from the official, recognizable address: <code>no_reply@blazepizza.com</code>.</li>
-<li><strong>Correct Links:</strong> All calls to action, like “ORDER NOW,” point to the company’s official website, <strong>blazepizza.com</strong>.</li>
-<li><strong>Professional Content:</strong> The email uses correct spelling and professional marketing language, including personalized text and detailed fine print.</li>
-<li><strong>No Deception:</strong> The tone is purely promotional, offering a time-limited discount, not demanding personal information or immediate action under threat.</li>
-</ul>
-<p><strong>Action:</strong> This email is safe to open and click if you are interested in the offer.</p>
-</aside>
-</section>
-<section id="example-4-siriusxm-renewal" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="example-4-siriusxm-renewal">Example 4 — “SiriusXM Renewal”</h2>
-<p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-1-1860d574-6152-4433-b7f3-0b5703edc2b7.png" class="img-fluid" style="width:50.0%"></p>
 <p><strong>Response</strong></p>
-<aside style="background:#f6ffed;border:1px solid #b7eb8f;padding:10px;border-radius:10px">
+<div style="background-color:#f6f8fa; border-left:4px solid #e83e8c; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
 <p><strong>Assessment: PHISHING (Critical Risk)</strong></p>
 <p>This is a <strong>phishing</strong> attempt, rated a high <strong>90/100</strong> risk, designed to steal your credit card details and login credentials by impersonating Sirius XM.</p>
 <p><strong>Critical Indicators:</strong></p>
@@ -233,7 +201,41 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Malicious Link:</strong> The “RENEW SUBSCRIPTION NOW” button directs you to a fraudulent website to harvest your personal and financial information.</li>
 </ul>
 <p><strong>Action:</strong> This is highly malicious. Do <strong>not</strong> click the link and delete the email immediately.</p>
-</aside>
+</div>
+</section>
+<section id="example-3-pizza-promo" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-pizza-promo">Example 3 — “Pizza Promo”</h2>
+<p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-4-dd83a16d-09af-45d5-9b9f-64774dd5ed5c.png" class="img-fluid" style="width:50.0%"></p>
+<strong>Response</strong>
+<div style="background-color:#f6f8fa; border-left:4px solid #e83e8c; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
+<p><strong>Assessment: Marketing (Low Risk)</strong></p>
+<p>This is a <strong>genuine marketing</strong> email from <strong>Blaze Pizza</strong>, rated a very low <strong>10/100</strong> risk. It offers a real promotion despite being incorrectly flagged as spam.</p>
+<p><strong>Key Indicators:</strong></p>
+<ul>
+<li><strong>Legitimate Sender:</strong> The email comes from the official, recognizable address: <code>no_reply@blazepizza.com</code>.</li>
+<li><strong>Correct Links:</strong> All calls to action, like “ORDER NOW,” point to the company’s official website, <strong>blazepizza.com</strong>.</li>
+<li><strong>Professional Content:</strong> The email uses correct spelling and professional marketing language, including personalized text and detailed fine print.</li>
+<li><strong>No Deception:</strong> The tone is purely promotional, offering a time-limited discount, not demanding personal information or immediate action under threat.</li>
+</ul>
+<p><strong>Action:</strong> This email is safe to open and click if you are interested in the offer.</p>
+</div>
+</section>
+<section id="example-4-siriusxm-renewal" class="level2">
+<h2 class="anchored" data-anchor-id="example-4-siriusxm-renewal">Example 4 — “SiriusXM Renewal”</h2>
+<p><img src="phishing_or_not_files/figure-html/e508b28a-568f-48f1-8538-11bf8e85aedb-1-1860d574-6152-4433-b7f3-0b5703edc2b7.png" class="img-fluid" style="width:50.0%"></p>
+<p><strong>Response</strong></p>
+<div style="background-color:#f6f8fa; border-left:4px solid #e83e8c; padding:12px; font-family:'Fira Code', monospace; font-size:0.95rem;">
+<p><strong>Assessment: PHISHING (Critical Risk)</strong></p>
+<p>This is a <strong>phishing</strong> attempt, rated a high <strong>90/100</strong> risk, designed to steal your credit card details and login credentials by impersonating Sirius XM.</p>
+<p><strong>Critical Indicators:</strong></p>
+<ul>
+<li><strong>Fake Sender:</strong> The email address is random gibberish (<code>fvgvcankatx@...</code>), not an official Sirius XM address.</li>
+<li><strong>Extreme Urgency:</strong> The subject line, “<strong>Your Account… Will Be Removed Today</strong>,” pressures immediate action to prevent loss of service.</li>
+<li><strong>Deceptive Offer:</strong> It offers “90 days for FREE” to bait a click, followed by the requirement to enter credit card details for “validation.”</li>
+<li><strong>Malicious Link:</strong> The “RENEW SUBSCRIPTION NOW” button directs you to a fraudulent website to harvest your personal and financial information.</li>
+</ul>
+<p><strong>Action:</strong> This is highly malicious. Do <strong>not</strong> click the link and delete the email immediately.</p>
+</div>
 <p>I thought Gemini 2.5 Flash handled these emails impressively well. It didn’t just label messages as spam or not—it explained why in clear, structured ways that matched human reasoning. The model consistently highlighted sender-domain mismatches, urgency cues, and fake branding with accuracy, while also recognizing the actual marketing email I was surprised by how quickly it spotted red flags that even some people might overlook, making it a genuinely helpful companion for everyday digital hygiene. I did think that the first example was pretty clearly a spam/phishing email but it rated it not as highly as the other ones. Overall, I think it would be very helpful to use LLM as a checker for all emails to give warnings of why an email could be spam or a phishing attempt.</p>
 
 

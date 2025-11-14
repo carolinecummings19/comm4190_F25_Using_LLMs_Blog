@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/about.html</loc>
-    <lastmod>2025-11-14T02:53:10.971Z</lastmod>
+    <lastmod>2025-11-14T03:52:08.610Z</lastmod>
   </url>
   <url>
     <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/001_marathon_plan/marathon_plan.html</loc>
-    <lastmod>2025-11-14T02:53:10.973Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/016_california_trip/california_road_trip.html</loc>
-    <lastmod>2025-11-14T02:53:11.086Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/009_image_generation/image_gen.html</loc>
-    <lastmod>2025-11-14T02:53:11.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_baking_recipes/baking_blog.html</loc>
-    <lastmod>2025-11-14T02:53:10.973Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/012_phishing/phishing_or_not.html</loc>
-    <lastmod>2025-11-14T02:53:11.078Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_philly_spots/philly_must_go.html</loc>
-    <lastmod>2025-11-14T02:53:10.987Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_handyman/toilet_repair.html</loc>
-    <lastmod>2025-11-14T02:53:10.974Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
-    <lastmod>2025-11-14T02:53:10.972Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
-    <lastmod>2025-11-14T02:53:10.971Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/013_book_review_1/book_review_1.html</loc>
-    <lastmod>2025-11-14T02:53:11.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/007_offline_lookup/offline_LLM.html</loc>
-    <lastmod>2025-11-14T02:53:10.987Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/005_spanish_with_qwen/translation_task.html</loc>
-    <lastmod>2025-11-14T02:53:10.983Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_nano_banana/headshot_edits.html</loc>
-    <lastmod>2025-11-14T02:53:11.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/014_coding_practice/coding_qwen.html</loc>
-    <lastmod>2025-11-14T02:53:11.080Z</lastmod>
-  </url>
-  <url>
-    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/008_mental_health_check/mental_health_chat.html</loc>
-    <lastmod>2025-11-14T02:53:10.990Z</lastmod>
+    <lastmod>2025-11-14T03:52:08.611Z</lastmod>
   </url>
   <url>
     <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/004_localLLMs/localLLMS.html</loc>
-    <lastmod>2025-11-14T02:53:10.981Z</lastmod>
+    <lastmod>2025-11-14T03:52:08.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/008_mental_health_check/mental_health_chat.html</loc>
+    <lastmod>2025-11-14T03:52:08.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/014_coding_practice/coding_qwen.html</loc>
+    <lastmod>2025-11-14T03:52:08.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/011_nano_banana/headshot_edits.html</loc>
+    <lastmod>2025-11-14T03:52:08.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/005_spanish_with_qwen/translation_task.html</loc>
+    <lastmod>2025-11-14T03:52:08.622Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/007_offline_lookup/offline_LLM.html</loc>
+    <lastmod>2025-11-14T03:52:08.626Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/013_book_review_1/book_review_1.html</loc>
+    <lastmod>2025-11-14T03:52:08.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/index.html</loc>
+    <lastmod>2025-11-14T03:52:08.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/000_test_post/index.html</loc>
+    <lastmod>2025-11-14T03:52:08.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/003_handyman/toilet_repair.html</loc>
+    <lastmod>2025-11-14T03:52:08.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/006_philly_spots/philly_must_go.html</loc>
+    <lastmod>2025-11-14T03:52:08.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/012_phishing/phishing_or_not.html</loc>
+    <lastmod>2025-11-14T03:52:08.716Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/002_baking_recipes/baking_blog.html</loc>
+    <lastmod>2025-11-14T03:52:08.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/009_image_generation/image_gen.html</loc>
+    <lastmod>2025-11-14T03:52:08.678Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/016_california_trip/california_road_trip.html</loc>
+    <lastmod>2025-11-14T03:52:08.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/017_hair_cut/hair_cut.html</loc>
+    <lastmod>2025-11-14T03:52:08.731Z</lastmod>
   </url>
   <url>
     <loc>https://carolinecummings19.github.io/comm4190_F25_Using_LLMs_Blog/posts/010_plagiarism_detection/ai_detection.html</loc>
-    <lastmod>2025-11-14T02:53:11.054Z</lastmod>
+    <lastmod>2025-11-14T03:52:08.693Z</lastmod>
   </url>
 </urlset>
