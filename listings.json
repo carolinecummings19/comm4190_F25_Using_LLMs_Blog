@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/013_book_review/book_review_4.html",
+      "/posts/013_book_review/book_review_5.html",
+      "/posts/013_book_review/book_review_3.html",
+      "/posts/013_book_review/book_review_2.html",
       "/posts/015_web_app design/nets_proj.html",
       "/posts/020_gender_stereotypes/gender.html",
       "/posts/018_reactions/pain_reactions.html",
@@ -9,7 +13,7 @@
       "/posts/017_hair_cut/hair_cut.html",
       "/posts/016_california_trip/california_road_trip.html",
       "/posts/014_coding_practice/coding_qwen.html",
-      "/posts/013_book_review_1/book_review_1.html",
+      "/posts/013_book_review/book_review_1.html",
       "/posts/012_phishing/phishing_or_not.html",
       "/posts/011_nano_banana/headshot_edits.html",
       "/posts/010_plagiarism_detection/ai_detection.html",
