@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Caroline Cummings">
-<meta name="dcterms.date" content="2025-10-03">
-<meta name="description" content="Changing the colors and lighting in my headshot with AI.">
+<meta name="dcterms.date" content="2025-12-17">
+<meta name="description" content="Creating images of flight attendants and lawyers.">
 
-<title>Using Nano Banana and Gemini to Improve My Headshot – Caroline’s Explorations with LLMs</title>
+<title>Biases in Image Generation – Caroline’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,16 +118,19 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Using Nano Banana and Gemini to Improve My Headshot</h1>
+      <h1 class="title">Biases in Image Generation</h1>
                   <div>
         <div class="description">
-          Changing the colors and lighting in my headshot with AI.
+          Creating images of flight attendants and lawyers.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">Nano Banana</div>
-                <div class="quarto-category">Image generation</div>
+                <div class="quarto-category">prompting</div>
+                <div class="quarto-category">ChatGPT 5</div>
                 <div class="quarto-category">Gemini 2.5 Flash</div>
+                <div class="quarto-category">Image generation</div>
+                <div class="quarto-category">Nano banana</div>
+                <div class="quarto-category">book review</div>
               </div>
                   </div>
   </div>
@@ -145,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 3, 2025</p>
+        <p class="date">December 17, 2025</p>
       </div>
     </div>
     
@@ -164,17 +167,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="nano-banana-for-image-editing" class="level1">
-<h1>Nano Banana for Image Editing</h1>
-<section id="gemini-2.5-flash-image-model-released-in-august-of-this-year" class="level3">
-<h3 class="anchored" data-anchor-id="gemini-2.5-flash-image-model-released-in-august-of-this-year">Gemini 2.5 Flash Image model released in August of this year</h3>
-<p>Nano Banana is a new creative AI tool known for subtle, high-quality edits that keep images looking natural rather than over-processed. I was honestly skeptical when I first went to use it. From past experience, I’ve noticed that many image models struggle with consistency — they tend to change facial features or add an unnatural “AI-generated” look. The last thing I wanted was a headshot that didn’t really look like me.</p>
-<p>My prompt was:</p>
-<p>“Can you make the shadows in this image less dramatic? I would like my face to be a bit lighter and the overall colors in the image to be slightly warmer tones. Keep the Penn Engineering banner and how I look the same.”</p>
-<p><img src="headshot_edits_files/figure-html/a0d6fb6c-f3a7-454b-8f40-9959c2bfc65e-2-ca59ecc3-adc2-48e5-b389-9dafab4e2e65.jpeg" class="img-fluid" style="width:50.0%"> <img src="headshot_edits_files/figure-html/a0d6fb6c-f3a7-454b-8f40-9959c2bfc65e-1-5c8f2fd7-f2be-4567-b2d4-25e8759077d7.png" class="img-fluid" style="width:50.0%"></p>
-<p>Nano Banana softened the harsh shadows on my face, brightened my features just enough, and warmed up the tones — all while keeping me looking like myself and preserving the Penn Engineering banner in the background.</p>
-<p>The difference might seem subtle at first glance, but I think it elevates the professionalism of the photo. I was impressed not just by the technical accuracy, but by how natural the edit feels. It doesn’t scream “AI edit” at all — it just looks like a much better headshot.</p>
-<p>I’ll be updating my LinkedIn profile with the improved version, and I can confidently say Nano Banana exceeded my expectations.</p>
+<section id="analyzing-biases-in-ai-image-generation" class="level1">
+<h1>Analyzing biases in AI image generation</h1>
+<p>In my book <em>Superagency</em>, the authors discuss shaping LLM outputs by commands and with specific prompting you can steer LLMs away from any bias it may have from its training data. Here is an example from the book where the authors claim an LLM could be directed away from potential biases:</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>“But the ability to intervene, correct, and fine-tune LLM outputs in real time affords them a capacity to meet you where you are—in a way that books, video, and other forms of mediated knowledge simply cannot. If you prompt ChatGPT to “Create an image of a flight attendant serving lunch to a group of lawyers,” it will probably depict the flight attendant as female and the lawyers as predominantly male. But if you want a different image, you can steer toward the result you desire. You might say, “Create an image of a male flight attendant and a female flight attendant serving lunch to a gender-balanced and ethnically diverse group of lawyers.”</p>
+</div>
+<p>I was curious to see if these prompts actually did as expected so I gave these exacts instructions to ChatGPT 5.2 and, to compare with another frontier model, Gemini 2.5 Nano Banana. These were the outputs:</p>
+<section id="chatgpt" class="level4">
+<h4 class="anchored" data-anchor-id="chatgpt">ChatGPT</h4>
+<p><img src="bias_images_files/figure-html/d334c2bf-c550-44a4-9ba2-0308ff6c6f09-1-07e88c02-5d78-4f38-9883-ee88c48e1895.PNG" class="img-fluid" style="width:20.0%" alt="Gemini"> <img src="bias_images_files/figure-html/d334c2bf-c550-44a4-9ba2-0308ff6c6f09-2-45840664-1a2e-4773-83c2-b58eb81f0285.PNG" class="img-fluid" style="width:45.0%" alt="Gemini"></p>
+</section>
+<section id="gemini" class="level4">
+<h4 class="anchored" data-anchor-id="gemini">Gemini</h4>
+<p><img src="bias_images_files/figure-html/d334c2bf-c550-44a4-9ba2-0308ff6c6f09-3-6ce3ead6-42e6-4546-814b-87ef39ececa2.PNG" class="img-fluid" style="width:35.0%" alt="ChatGPT"> <img src="bias_images_files/figure-html/d334c2bf-c550-44a4-9ba2-0308ff6c6f09-4-8facab72-2346-4651-b466-3cc69295fe3b.PNG" class="img-fluid" style="width:35.0%" alt="ChatGPT"></p>
+<p>They performed pretty similar to how I would suspect. In the cases where gender and diversity are not addressed, ChatGPT depicts a white female flight attendant serving a white male lawyer. When I gave it the second prompt, it still produced a white female flight attendant and a white male lawyer but also a white male flight attendant and a black male lawyer. In the background, there is are black and Asian female lawyers but they are not the focus of the picture like the males are.</p>
+<p>Similarly, Gemini produced a (likely) white female flight attendant serving four lawyers, three of which were white males and one white female. For the second prompt, Gemini produced an Asian male flight attendant and an ethnically ambiguous female flight attendant. There are 6 lawyers in this picture and they are a lot more diverse, with a good mix of East Asian, South Asian, white male and female lawyers.</p>
+</section>
+<section id="overall" class="level3">
+<h3 class="anchored" data-anchor-id="overall">Overall</h3>
+<p>I thought Gemini performed better with the second prompt asking for gender balance and ethnic diversity. The original outputs, however, clearly show an underlying issue of structural bias in the model likely due to the type of pictures it was trained on.</p>
+<p>A few paragraphs later in the book, the authors encourage users of LLMs to tweak their prompts to nudge the LLM and mitigate bias. I think that this is not a great solution to dealing with model bias. First, people are likely not thinking about these biases when looking over output and if anything the output is reinforcing biases they already have because of societal trends. Second, should this responsibility even fall on users or on the developers of the models?</p>
 
 
 </section>
