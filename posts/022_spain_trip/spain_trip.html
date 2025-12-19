@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Caroline Cummings">
-<meta name="dcterms.date" content="2025-11-25">
-<meta name="description" content="Vibe coding a crowdsourcing fitness app.">
+<meta name="dcterms.date" content="2025-12-18">
+<meta name="description" content="Winter trip to Zaragoza, Spain.">
 
-<title>Iterating on a Frontend with Cursor – Caroline’s Explorations with LLMs</title>
+<title>Using Gemini to Plan 4 Days in Spain – Caroline’s Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,17 +118,18 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Iterating on a Frontend with Cursor</h1>
+      <h1 class="title">Using Gemini to Plan 4 Days in Spain</h1>
                   <div>
         <div class="description">
-          Vibe coding a crowdsourcing fitness app.
+          Winter trip to Zaragoza, Spain.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">ChatGPT 5</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">productivity</div>
-                <div class="quarto-category">coding</div>
+                <div class="quarto-category">travel</div>
+                <div class="quarto-category">Gemini 2.5 Flash</div>
+                <div class="quarto-category">Image generation</div>
+                <div class="quarto-category">Nano Banana</div>
+                <div class="quarto-category">book review</div>
               </div>
                   </div>
   </div>
@@ -146,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">November 25, 2025</p>
+        <p class="date">December 18, 2025</p>
       </div>
     </div>
     
@@ -165,46 +166,39 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="section" class="level1">
-<h1></h1>
-</section>
-<section id="vibe-coding-frontend" class="level1">
-<h1>Vibe Coding Frontend</h1>
-<p>In another class I am taking we are building a crowdsourcing app that uses health data from users to make a game where they can compete on teams. We have to build this app from scratch, and in order to make our frontend look clean, I wanted to use an LLM to design it.</p>
-<p>Here is what the frontend looks like initially that my partner had initially pushed (also AI generated):</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="nets_proj_files/figure-html/f50e6359-3b36-4ea7-bfeb-a98fdd5d7985-1-586d234e-2d06-424d-ad2a-bf1c017df40b.png" class="img-fluid figure-img" style="width:60.0%"></p>
-<figcaption>Home Page</figcaption>
-</figure>
+<section id="planning-my-time-in-zaragoza-spain" class="level1">
+<h1>Planning my time in Zaragoza, Spain</h1>
+<p>My parents, my grandma, and I are going to Spain in January and have not planned the portion of the trip where we are in Zaragoza. We are visiting my mom’s cousin there and want to hit the major landmarks. To help my mom plan, I decided to enlist Gemini to give us recommendations to look into. Here is the prompt I gave it</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>I am planning a trip to Spain and have 4 days in Zaragoza. We already have accommodations in the city. We get there on January 18th in the afternoon and leave on the 22nd in the morning. I am not too familiar with the city so would like recommendations on how to fill our time there. Keep in mind we do not have a car but could potentially rent one. Any recommendations for what to inside and outside the city?</p>
 </div>
-<p>First, I gave our frontend to ChatGPT who knew the features and purpose of our app to recommend how we should improve our dashboard page. I also gave it our logo that we settled on and told it we wanted our frontend to match the vibe of it:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="nets_proj_files/figure-html/757579ef-0ca9-431a-8a5e-b0295f7c9fa4-1-b59358f7-89fe-4f68-9274-3b5d4466942f.jpg" class="img-fluid figure-img" style="width:30.0%"></p>
-<figcaption>Kinnect App Icon</figcaption>
-</figure>
-</div>
-<p>At first, the colors were not correct and in some cases the text was hard to read so asked for it to correct it. Here is what I landed on after this first iteration of prompting.</p>
-<p><img src="nets_proj_files/figure-html/804e6ea9-287a-4b31-96b2-552bdce5189e-1-1dc8a7d7-7651-49ac-88d7-29b0ec8f4f92.png" class="img-fluid" style="width:70.0%"></p>
-<p>I thought the colors were pretty good now and the vibe was similar to our app icon. However, I thought the layout was not ideal. I asked ChatGPT on how I could improve the layout.</p>
-<p>I gave it the screenshot and asked how I could improve the UI. It gave me suggestions to make tabs and abstract the Strava Connection.</p>
-<section id="chatgpt" class="level4">
-<h4 class="anchored" data-anchor-id="chatgpt">ChatGPT</h4>
+<p>Here was Gemini’s Response:</p>
 <blockquote class="blockquote">
-<p>✅ Reduce columns → switch to 2-column layout with a hero row, not 3–4 equal cards.</p>
-<p>✅ “Log Activity” → move main form into a modal, trigger from a “+ Log Activity” button in the nav and a subtle prompt on the dashboard.</p>
-<p>✅ “Connect with Strava” → make it a top onboarding banner until connected, then just show synced activities in a normal card.</p>
-<p>✅ Add a top nav bar → logo, sections, streak indicator, and global log button.</p>
+<p><strong>Day 1: Arrival &amp; The “El Tubo” Experience</strong> * <strong>Afternoon Arrival:</strong> Settle into your accommodation. If you are near the center, start with a walk to Plaza del Pilar, one of the largest pedestrian squares in Europe. * <strong>Evening:</strong> Head to <strong>El Tubo</strong>, a famous maze of narrow alleys filled with tapas bars. * <em>Tip:</em> Try the famous mushrooms at <em>El Champi</em> or the croquettes at <em>Doña Casta</em>.</p>
+<p><strong>Day 2: Mudéjar Architecture &amp; Roman Roots</strong> * <strong>Morning:</strong> Visit the <strong>Basilica del Pilar</strong>. It’s free to enter, but pay the small fee to take the elevator up the tower for the best panoramic view of the city and the Ebro River. * <strong>Late Morning:</strong> Walk 2 minutes to <strong>La Seo Cathedral</strong>. While the Basilica is more famous, many locals prefer La Seo for its stunning mix of Gothic and Mudéjar (Islamic-influenced) styles. * <strong>Afternoon:</strong> Follow the <strong>Roman Route</strong>. Zaragoza was the Roman city Caesaraugusta. Visit the <strong>Roman Theatre</strong> (the most impressive ruin) and the <strong>Forum Museum</strong> located underground.</p>
+<p><strong>Day 3: The Aljafería &amp; Modern Art</strong> * <strong>Morning: Aljafería Palace</strong>. This 11th-century Islamic palace is a UNESCO World Heritage site and arguably the most important Moorish building outside of Andalusia. * <em>Note:</em> It currently houses the regional parliament, so booking tickets online in advance is highly recommended. * <strong>Afternoon:</strong> Visit the <em>Goya Museum</em>. Francisco de Goya was born just outside the city, and this museum houses a significant collection of his engravings and paintings. * <strong>Alternative:</strong> If you prefer modern art, the <em>IAACC Pablo Serrano</em> is a striking building with great contemporary exhibits.</p>
+<p><strong>Day 4: Day Trip (No Car Needed)</strong> You can easily see incredible sites outside the city using Spain’s efficient train (AVE) or bus network: * <strong>Option A:</strong> <strong>Alquézar (Bus/Tour)</strong>: Often cited as one of Spain’s most beautiful medieval villages, famous for its “footbridges” walk along the river. * <strong>Option B:</strong> <strong>Monasterio de Piedra (Bus)</strong>: A stunning natural park filled with waterfalls and a 12th-century monastery. There is a direct bus from the Zaragoza Delicias station that takes about 2 hours. * <strong>Option C:</strong> <strong>Belchite (Bus)</strong>: For history buffs, the ruins of “Old Belchite” (destroyed in the Civil War) serve as a haunting “ghost town” memorial.</p>
 </blockquote>
-<p>I then asked it to give me a prompt to give my copilot in VS Code. I had to tweak it a couple times to get it how I wanted it but here is how it turned out:</p>
-<p><img src="nets_proj_files/figure-html/4d883756-8faf-4029-aee8-e713688fa89c-2-9d015709-f32d-48ab-bcc5-09b498a7fd77.png" class="img-fluid" style="width:70.0%"></p>
-<p>Here is it after connecting to Strava:</p>
-<p><img src="nets_proj_files/figure-html/4d883756-8faf-4029-aee8-e713688fa89c-1-729eb42b-6ea7-4d37-9d8c-f66000d6a2c8.png" class="img-fluid" style="width:70.0%"></p>
-<p>Overall, I thought using a combination of ChatGPT and Github Copilot greatly reduced the amount of time needed to build the frontend of our app. I thought chatting with ChatGPT 5.0 was helpful in brainstorming and getting a copy-paste prompt to then generate code in VS Code. I think this combo is good for people who don’t have super strong coding skills as well.</p>
+<p>I thought this was a great response. Gemini also offered to but the recommendations into a sheet so I clicked on it and it generated this sheet:</p>
+<p><img src="spain_trip_files/figure-html/c284971f-ab69-4415-92af-83d2c8ef12be-1-403cc958-f49f-4312-bf76-28649053d599.png" class="img-fluid" style="width:60.0%"></p>
+<p>The sheet was not exactly that much more helpful but the overall recommendations were great. I especially liked the options for taking bus tours instead of renting a car. I think we will definitely look into booking the bus tour to the monastery and Alquézar because the pictures online look beautiful. I compared the output to TripAdvisor:</p>
+<ol type="1">
+<li><strong>Basílica de Nuestra Señora del Pilar</strong></li>
+<li><strong>Palacio de la Aljafería</strong></li>
+<li><strong>Catedral del Salvador (La Seo)</strong></li>
+<li><strong>Plaza del Pilar</strong></li>
+<li><strong>Museo del Teatro de Caesaraugusta</strong> (Roman Theatre)</li>
+<li><strong>Acuario de Zaragoza</strong> (Freshwater Aquarium)</li>
+<li><strong>Museo Goya - Colección Ibercaja</strong></li>
+<li><strong>Parque Grande José Antonio Labordeta</strong></li>
+<li><strong>El Tubo</strong> (The famous tapas district)</li>
+<li><strong>Puente de Piedra</strong> (Stone Bridge)</li>
+<li><strong>Mercado Central de Zaragoza</strong></li>
+<li><strong>Museo del Foro de Caesaraugusta</strong> (Roman Forum Museum)</li>
+</ol>
+<p>There were some overlap but Gemini was also able to give me things to do outside of the city. Overall, as a tool to narrow down the overwhelming amount of information out there, Gemini was great. I got a lot of direct leads that saved me time and probably a lot of stress behind the wheel.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
