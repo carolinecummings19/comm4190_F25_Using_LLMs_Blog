@@ -167,7 +167,38 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="recreating-a-street-corner-in-philadelphia" class="level1">
 <h1>Recreating a Street Corner in Philadelphia</h1>
-<p>I wanted to test the capabilities of Nano Banana to generate a realistic image using my description of a picture I had on my phone. Here is the reference photo:</p>
+<p>I wanted to test the capabilities of Nano Banana to generate a realistic image using my description of a picture I had on my phone. The photo is at the corner of Walnut and 23rd of Rosy’s Taco Bar in April. Here is the reference photo:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="replicate_pic_files/figure-html/162dcbb4-d404-472b-926d-ea4af52799a3-1-806372dd-e39c-49bf-bed5-5c558f174378.jpeg" class="img-fluid figure-img" style="width:30.0%"></p>
+<figcaption>Rosy’s Taco Bar</figcaption>
+</figure>
+</div>
+<p>My original prompt to Gemini was as follows:</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>Can you generate an image that takes place in Philadelphia? I want the image to be a corner shot of Rosy’s Taco Bar in the Spring when they have a vine of pink and orange flowers climbing up the corner of the building. The view should include the Walnut street sign (one way) and have two outside tables. it should be bright out.</p>
+</div>
+<p>Here was the original picture it generated:</p>
+<p><img src="replicate_pic_files/figure-html/b3838e2c-8472-46dd-b391-195387300d66-1-abcdce42-6ed6-448f-a03f-71628c6efe76.png" class="img-fluid" style="width:40.0%"></p>
+<p>I thought this was a pretty good start but there were clearly some tweaks needed to be done. So I listed them out in a response:</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>Edits to the picture: Can you make the view closer to the building and more of the side so that the righthand window is visible and not the lefthand window. there is no door at the corner but rather on the right side after the window. the door is not in view. in the window you can see papel picado hanging. on the dark green awning above the window, there is “rosy’s taco bar” in all caps.</p>
+</div>
+<p>Here was the new picture:</p>
+<p><img src="replicate_pic_files/figure-html/2b238be3-6cd1-4023-b3d3-4775ea08454b-1-276c5a46-6dbb-4967-b316-eb7b6e9a6439.png" class="img-fluid" style="width:40.0%"></p>
+<p>This one followed my instructions by adding the window covers with “Rosy’s Taco Bar” and the colorful <em>papel picado</em> to the inside but removed the tables and street sign that I had originally asked for. Thus, I prompted again with</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>Can you make the flowers only one single vine in the center, replacing the door? the flowers are deeper pink. please add two chairs and a table. please add the street sign with walnut st. please make the building’s lower level concrete square and the upper levels brick.</p>
+</div>
+<p>Here is what it generated:</p>
+<p><img src="replicate_pic_files/figure-html/6f7bb9fd-b7c5-49db-8069-ccd47bcf0a53-1-90223e26-0d9d-47b6-875b-858f5f2dfb1c.png" class="img-fluid" style="width:40.0%"></p>
+<p>The flowers looked more like the same color but there was still issues with the perspective and the look of the building. It did not capture the two materials of the first and second levels of the building. At this point, I thought it was not improving significantly with my prompts, so I decided to start fresh and edit my first prompt to include more. I prompted:</p>
+<div style="background-color:#f6f8fa; border-left:4px solid #0366d6; padding:12px; font-family: 'Fira Code', monospace; font-size: 0.90rem;">
+<p>Can you generate an image that takes place in Philadelphia? I want the image to be a corner shot of Rosy’s Taco Bar on Walnut St.&nbsp;The image should be in the Spring when they have the small vine of deep pink and orange flowers climbing up the corner of the building. The view should include the Walnut street sign (one way) and have two outside tables. It should be bright out. The building is brick on the upper levels and concrete/stone on the first level. please add two chairs and a table. outside. the door is not visible but you can see “Rosy’s Taco Bar” above the window on the dark green awnings</p>
+</div>
+<p>It generated the following image (compare with original):</p>
+<p><img src="replicate_pic_files/figure-html/8118a1f1-098b-40c0-bdea-98393633580d-2-791e2c37-099e-477b-8696-815c8d1fc9db.png" class="img-fluid" style="width:40.0%" alt="image.png"> <img src="replicate_pic_files/figure-html/8118a1f1-098b-40c0-bdea-98393633580d-1-12cdde82-6139-4ab6-bf7b-25287fab430b.jpeg" class="img-fluid" style="width:30.0%"></p>
+<p>Honestly, I thought this was the closest I was going to get with a single prompt to the original photo. I think with more experience prompting I could guide the LLM to generate a better image. Even with my few prompts, I noticed it made the building with an angular corner instead of 90 degrees. Overall, I was relatively impressed with Nano Banana’s image generation capabilities.</p>
 
 
 </section>
